@@ -1,0 +1,4 @@
+P2POrderServer.nsi 文件服务器安装文件制作脚本 P2POrderServer.exe 主程序配置说明详细说明见 P2POrderServer.ini
+
+html 里为简单的 asp 测试页，要安装IIS， 将 html 设为根目录即可，首页为msn.asp
+

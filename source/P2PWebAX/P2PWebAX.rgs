@@ -1,0 +1,11 @@
+HKCR
+{
+	NoRemove AppID
+	{
+		'%APPID%' = s 'P2PWebAX'
+		'P2PWebAX.DLL'
+		{
+			val AppID = s '%APPID%'
+		}
+	}
+}

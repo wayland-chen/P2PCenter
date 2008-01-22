@@ -1,0 +1,63 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "P2PNetwork", "P2PNetwork\P2PNetwork.vcproj", "{297438D8-7998-4FBB-88BB-E3B57F054ED6}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "P2POrderClient", "P2POrderClient\P2POrderClient.vcproj", "{85BAE77B-7940-4AE1-AE35-EA4F56B7B948}"
+	ProjectSection(ProjectDependencies) = postProject
+		{297438D8-7998-4FBB-88BB-E3B57F054ED6} = {297438D8-7998-4FBB-88BB-E3B57F054ED6}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "P2PIEClient", "P2PIEClient\P2PIEClient.vcproj", "{F4026FB7-C875-4822-8FE8-0B4387A0ECCF}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "P2POrderServer", "P2POrderServer\P2POrderServer.vcproj", "{49BB2178-6719-4E16-B967-E298B8A58FE6}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "P2PWebAX", "P2PWebAX\P2PWebAX.vcproj", "{B02F4B46-4500-42CD-BF89-9C0C2F08514A}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "P2PService", "P2PService\P2PService.vcproj", "{764C66CB-2CFC-4A5D-B4F8-9A8A9F2A1098}"
+	ProjectSection(ProjectDependencies) = postProject
+		{297438D8-7998-4FBB-88BB-E3B57F054ED6} = {297438D8-7998-4FBB-88BB-E3B57F054ED6}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{297438D8-7998-4FBB-88BB-E3B57F054ED6}.Debug.ActiveCfg = Debug|Win32
+		{297438D8-7998-4FBB-88BB-E3B57F054ED6}.Debug.Build.0 = Debug|Win32
+		{297438D8-7998-4FBB-88BB-E3B57F054ED6}.Release.ActiveCfg = Release|Win32
+		{297438D8-7998-4FBB-88BB-E3B57F054ED6}.Release.Build.0 = Release|Win32
+		{85BAE77B-7940-4AE1-AE35-EA4F56B7B948}.Debug.ActiveCfg = Debug|Win32
+		{85BAE77B-7940-4AE1-AE35-EA4F56B7B948}.Debug.Build.0 = Debug|Win32
+		{85BAE77B-7940-4AE1-AE35-EA4F56B7B948}.Release.ActiveCfg = Release|Win32
+		{85BAE77B-7940-4AE1-AE35-EA4F56B7B948}.Release.Build.0 = Release|Win32
+		{F4026FB7-C875-4822-8FE8-0B4387A0ECCF}.Debug.ActiveCfg = Debug|Win32
+		{F4026FB7-C875-4822-8FE8-0B4387A0ECCF}.Debug.Build.0 = Debug|Win32
+		{F4026FB7-C875-4822-8FE8-0B4387A0ECCF}.Release.ActiveCfg = Release|Win32
+		{F4026FB7-C875-4822-8FE8-0B4387A0ECCF}.Release.Build.0 = Release|Win32
+		{49BB2178-6719-4E16-B967-E298B8A58FE6}.Debug.ActiveCfg = Debug|Win32
+		{49BB2178-6719-4E16-B967-E298B8A58FE6}.Debug.Build.0 = Debug|Win32
+		{49BB2178-6719-4E16-B967-E298B8A58FE6}.Release.ActiveCfg = Release|Win32
+		{49BB2178-6719-4E16-B967-E298B8A58FE6}.Release.Build.0 = Release|Win32
+		{B02F4B46-4500-42CD-BF89-9C0C2F08514A}.Debug.ActiveCfg = Debug|Win32
+		{B02F4B46-4500-42CD-BF89-9C0C2F08514A}.Debug.Build.0 = Debug|Win32
+		{B02F4B46-4500-42CD-BF89-9C0C2F08514A}.Release.ActiveCfg = Release|Win32
+		{B02F4B46-4500-42CD-BF89-9C0C2F08514A}.Release.Build.0 = Release|Win32
+		{764C66CB-2CFC-4A5D-B4F8-9A8A9F2A1098}.Debug.ActiveCfg = Debug|Win32
+		{764C66CB-2CFC-4A5D-B4F8-9A8A9F2A1098}.Debug.Build.0 = Debug|Win32
+		{764C66CB-2CFC-4A5D-B4F8-9A8A9F2A1098}.Release.ActiveCfg = Release|Win32
+		{764C66CB-2CFC-4A5D-B4F8-9A8A9F2A1098}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,2 @@
+P2PClient.nsi 客户端安装文件制作脚本, P2PIEClient.exe 主程序运行打开的默认首页请修改 P2PIEClient.ini 里 Main.DefaultUrl
+P2PPublisher.nsi 文件发布端安装文件制作脚本 P2POrderClient.exe 主程序配置说明详细说明见 P2POrderClient.ini
