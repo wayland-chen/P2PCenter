@@ -1,0 +1,39 @@
+编译说明:
+
+.	编译环境安装 Microsoft Visual Studio .NET 2003
+
+. 	下载WTL(版本:7.5), 网站 http://sourceforge.net/projects/wtl/, 解压并将 wtl/include 加入VS.Net include 工程
+	参考方法: 
+		打开 Microsoft Visual Studio .NET 2003 点击菜单 工具->选项->Projects->VC++目录->包含文件 ...
+
+.	
+
+
+安装说明:
+
+客户端打包: 客户端打包用 NSIS, 先安装 NSIS程序,下载地址：http://opensource.kan8888.com/tools/nsis208chs2005.exe,
+		打包脚本见 bin/P2PClient.sis
+
+发布端打包: 打包脚本见 bin/P2PPublisher.nsi
+	发布端数据库表导入 doc/P2PPublish.sql 脚本
+
+服务端安装:
+.	Windows: 安装 SqlServer 2000, 创建库并运行 doc/P2POrderServer.sql
+
+.	Linux: 安装 Mysql 并导入相关数据
+
+
+配置相关:
+	
+.	客户端: P2PNetwork.ini and P2PIEClient.ini, 发布端: P2POrderClient.ini, 服务端: P2POrderServer.ini
+	具体详细配置方法见各文件备注
+
+
+运行:
+
+.	首先运行 P2POrderServer.exe,
+
+.	再运行 P2POrderClient.exe 进行发布
+
+.	再启动服务程序 P2PServer.exe, 此程序为服务程序,先运行 Install.bat 进行安装,然后运行 Start.bat启动
+	也可以用打包后的程序进行安装,安装后自动启动.

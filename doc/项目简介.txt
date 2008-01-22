@@ -1,0 +1,24 @@
+项目简介：
+	P2P点播直播开源项目是一个由Kevin发起，多人参与开发并不断更新，符合GPL开源协议的开源项目。
+
+目的：缩短企业同类型项目开发周期，集成多种P2P协议，如BT,EMULE等。
+
+主要功能：
+	Peer 间传输数据采用UDP，能有效的穿透防火墙，在进一步的版本中将实现TCP及UPNP穿透
+	能够实现流媒体的点播及直播，还能共享其他文件，文件类型不限。
+	流媒体文件支持广泛，如rmvb,wmv,flv,mp4等
+
+源代码下载论坛：http://opensource.kan8888.com 
+
+SVN下载地址：
+
+	工程地址: svn://p2p.kan8888.com/P2PCenter
+	用户名：mc_public
+	密码：kan8888.com
+
+演示网站：http://www.skyvcd.com
+
+最新源代码打包下载：http://opensource.kan8888.com/soft/P2PCenter_last.rar
+
+P2P点播直播开源项目 非常不错
+http://opensource.kan8888.com 
