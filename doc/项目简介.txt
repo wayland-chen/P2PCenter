@@ -16,6 +16,10 @@ SVN下载地址：
 	用户名：mc_public
 	密码：kan8888.com
 
+sourceforge.net 下载地址：
+website:http://p2pmedia.svn.sourceforge.net
+SVN 地址：https://p2pmedia.svn.sourceforge.net/svnroot/p2pmedia 
+
 演示网站：http://www.skyvcd.com
 
 最新源代码打包下载：http://opensource.kan8888.com/soft/P2PCenter_last.rar
