@@ -40,7 +40,7 @@
 #ifdef _WIN32
     typedef HANDLE              waitobj_t;
     typedef WSANETWORKEVENTS    waitevents_t;
-    #define WAITOBJ_MAX         MAXIMUM_WAIT_OBJECTS
+    #define WAITOBJ_MAX         MAXP2PM_WAIT_OBJECTS
 
     #define WAITOBJ_IS_VALID(obj)       (obj != NULL)
     #define WAIT_EVENT_ACCEPT(wevt)     (wevt.lNetworkEvents & FD_ACCEPT)
