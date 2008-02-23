@@ -289,7 +289,8 @@ public:
 			"jul", "aug", "sep", "oct", "nov", "dec" 
 		};
 
-		for( int nMonth=1; nMonth <= 12; ++nMonth )
+		int nMonth = 0;
+		for( nMonth=1; nMonth <= 12; ++nMonth )
 		{
 			if ( compareNoCase( str, aMonths[nMonth] ) )
 				break;

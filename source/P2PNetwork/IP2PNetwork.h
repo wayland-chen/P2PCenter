@@ -13,8 +13,8 @@ using namespace std;
 class IP2PNetworkNotify
 {
 public:
-	virtual OnConnect() = 0;
-	virtual OnDisConnect() = 0;
+	virtual void OnConnect() = 0;
+	virtual void OnDisConnect() = 0;
 };
 
 // ²Î¿¼ CONNNECT_STATUS in P2PPeer.h

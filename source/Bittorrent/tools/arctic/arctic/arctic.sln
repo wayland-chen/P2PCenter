@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "arctic", "arctic.vcproj", "{E976B448-80A6-495D-B916-CC313DB1127B}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{E976B448-80A6-495D-B916-CC313DB1127B}.Debug.ActiveCfg = Debug|Win32
+		{E976B448-80A6-495D-B916-CC313DB1127B}.Debug.Build.0 = Debug|Win32
+		{E976B448-80A6-495D-B916-CC313DB1127B}.Release.ActiveCfg = Release|Win32
+		{E976B448-80A6-495D-B916-CC313DB1127B}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

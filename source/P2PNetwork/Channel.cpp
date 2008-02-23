@@ -279,7 +279,7 @@ void CChannel::SendPeerNeedBlock()
 							pCmd->m_nCheckSum = g_pNetwork->CalcCheckSum( pCmd->m_szBuffer, sizeof(pCmd->m_szBuffer) );
 							g_pNetwork->PushUdpPeerCmd( pCmd );
 
-							static nSendPackets = 0;
+							static UINT nSendPackets = 0;
 							if ( ++nSendPackets % 100 == 1)
 							{
 								CKLog::WriteLog( LOG_TYPE_DEBUG, "already send packet num %d.", nSendPackets);

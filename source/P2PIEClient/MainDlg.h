@@ -66,6 +66,7 @@ public:
 	LRESULT OnInitDialog(UINT /*uMsg*/, WPARAM /*wParam*/, LPARAM /*lParam*/, BOOL& /*bHandled*/)
 	{
 		// center the dialog on the screen
+		MoveWindow( 0, 0, 800, 500, TRUE);
 		CenterWindow();
 
 		// set icons

@@ -1,0 +1,317 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 英语(美国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_TRAYMENU MENU 
+BEGIN
+    POPUP "Tray"
+    BEGIN
+        MENUITEM "&Open Arctic...",             ID_TRAY_OPEN
+        MENUITEM SEPARATOR
+        MENUITEM "&Pause All",                  ID_TRAY_PAUSE
+        MENUITEM "&Resume All",                 ID_TRAY_RESUME
+        MENUITEM SEPARATOR
+        MENUITEM "&About Arctic...",            ID_TRAY_ABOUT
+        MENUITEM "E&xit",                       ID_TRAY_EXIT
+    END
+END
+
+IDR_MAINMENU MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&Open...",                    ID_FILE_OPEN1
+        MENUITEM SEPARATOR
+        MENUITEM "&Configuration...",           ID_FILE_CONFIGURATION
+        MENUITEM SEPARATOR
+        MENUITEM "&Debug...",                   ID_FILE_DEBUG
+        MENUITEM SEPARATOR
+        MENUITEM "&Exit",                       ID_FILE_EXIT
+    END
+    POPUP "&About"
+    BEGIN
+        MENUITEM "&About Arctic...",            ID_ABOUT_ABOUT
+    END
+END
+
+IDR_CONTEXTMENU MENU 
+BEGIN
+    POPUP "Context"
+    BEGIN
+        MENUITEM "&Open",                       ID_CONTEXT_OPEN
+        MENUITEM SEPARATOR
+        MENUITEM "Force Re&announce",           ID_CONTEXT_ANNOUNCE
+        MENUITEM SEPARATOR
+        MENUITEM "&Pause",                      ID_CONTEXT_PAUSE
+        MENUITEM "&Resume",                     ID_CONTEXT_RESUME
+        MENUITEM SEPARATOR
+        MENUITEM "R&emove",                     ID_CONTEXT_REMOVE
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_CONFIG DIALOGEX 0, 0, 267, 263
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_MINIMIZEBOX | 
+    WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Arctic Configuration"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "&OK",IDOK,156,242,50,14
+    PUSHBUTTON      "&Cancel",IDCANCEL,210,242,50,14
+    CONTROL         "Upload: ",IDC_LIMITUPLOAD,"Button",BS_AUTOCHECKBOX | 
+                    BS_VCENTER | WS_TABSTOP,14,46,40,14
+    EDITTEXT        IDC_UPLOADLIMIT,59,46,40,14,ES_NUMBER | WS_DISABLED
+    CONTROL         "",IDC_UPLOADLIMITSPIN,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | 
+                    UDS_NOTHOUSANDS | WS_DISABLED,93,46,10,14
+    LTEXT           "KiB/s",IDC_STATIC,105,46,16,14,SS_CENTERIMAGE
+    CONTROL         "Download:",IDC_LIMITDOWNLOAD,"Button",BS_AUTOCHECKBOX | 
+                    BS_VCENTER | WS_TABSTOP,137,46,50,14
+    EDITTEXT        IDC_DOWNLOADLIMIT,191,46,40,14,ES_NUMBER | WS_DISABLED
+    CONTROL         "",IDC_DOWNLOADLIMITSPIN,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS | UDS_NOTHOUSANDS | WS_DISABLED,225,46,10,
+                    14
+    LTEXT           "KiB/s",IDC_STATIC,237,46,16,14,SS_CENTERIMAGE
+    EDITTEXT        IDC_FIRSTPORT,14,107,40,14,ES_NUMBER
+    CONTROL         "",IDC_FIRSTPORTSPIN,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | 
+                    UDS_NOTHOUSANDS,46,107,10,14
+    EDITTEXT        IDC_LASTPORT,72,107,40,14,ES_NUMBER
+    CONTROL         "",IDC_LASTPORTSPIN,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | 
+                    UDS_NOTHOUSANDS,106,107,10,14
+    CTEXT           "-",IDC_STATIC,60,107,8,14,SS_CENTERIMAGE
+    GROUPBOX        "Speed Limits",IDC_STATIC,7,7,253,60
+    GROUPBOX        "Download Path",IDC_STATIC,7,136,253,35
+    EDITTEXT        IDC_DOWNLOADPATH,14,150,188,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    PUSHBUTTON      "&Browse",IDC_BROWSE,203,150,50,14
+    GROUPBOX        "Ports",IDC_STATIC,7,75,253,54
+    LTEXT           "Arctic will only use a single port, but if you have multiple applications using the same range it will use the first available.",
+                    IDC_STATIC,14,86,239,18
+    LTEXT           "Downloading takes a bit of uploading, and will suffer if you max out your upload.  It is recommended to limit your upload to 80% of what it actually is.",
+                    IDC_STATIC,14,18,239,24
+    GROUPBOX        "File Association",IDC_STATIC,7,179,253,56
+    PUSHBUTTON      "&Associate",IDC_ASSOCIATE,203,214,50,14
+    LTEXT           "Associating .torrent files with Arctic will let you open them from the shell.  If another application is associated with .torrent files, this will overwrite it.",
+                    IDC_STATIC,14,191,238,19
+END
+
+IDD_ABOUT DIALOGEX 0, 0, 298, 145
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_MINIMIZEBOX | 
+    WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "About Arctic"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "&OK",IDOK,243,126,50,14
+    EDITTEXT        IDC_LICENSE,5,5,288,117,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_READONLY | WS_VSCROLL
+    PUSHBUTTON      "Launch &Homepage",IDC_HOMEPAGE,5,126,76,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_CONFIG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 260
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 256
+    END
+
+    IDD_ABOUT, DIALOG
+    BEGIN
+        LEFTMARGIN, 5
+        RIGHTMARGIN, 293
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 140
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXT
+//
+
+IDR_ABOUTTEXT           TEXT                    "about.txt"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,2,4,8
+ PRODUCTVERSION 1,2,4,8
+ FILEFLAGSMASK 0x17L
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "http://dev.int64.org/arctic.html"
+            VALUE "CompanyName", "Int64.org"
+            VALUE "FileDescription", "Arctic Torrent"
+            VALUE "FileVersion", "1, 2, 4, 8"
+            VALUE "LegalCopyright", "Copyright (c) 2004-2005 Cory Nelson"
+            VALUE "OriginalFilename", "arctic.exe"
+            VALUE "ProductName", "Arctic Torrent"
+            VALUE "ProductVersion", "1, 2, 4, 8"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ARCTIC              ICON                    "arctic.ico"
+IDI_TORRENT             ICON                    "torrent.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_QUEUED              "Queued"
+    IDS_CHECKING            "Checking"
+    IDS_CONNECTING          "Connecting"
+    IDS_DOWNLOADING         "Downloading"
+    IDS_SEEDING             "Seeding"
+    IDS_NAME                "Name"
+    IDS_SIZE                "Size"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_DOWNLOADED          "Downloaded"
+    IDS_STATUS              "Status"
+    IDS_SEEDS               "Seeds"
+    IDS_PEERS               "Peers"
+    IDS_UNKNOWN             "Unknown"
+    IDS_ASSOCIATE           "In order to be fully integrated with windows I need to associate Arctic with torrent files.\nHowever, this can cause problems if another program is already associated with them.\n\nIs it okay for me to continue?"
+    IDS_ASSOCIATECAPTION    "Torrent Association"
+    IDS_UPLOADED            "Uploaded"
+    IDS_PROGRESS            "Progress"
+    IDS_PAUSED              "Paused"
+    IDS_DOWNPATH            "Download Path"
+    IDS_EXCEPTION           "Exception Occured"
+    IDS_MYDOWNLOADS         "My Downloads"
+    IDS_TIME                "Time"
+    IDS_MESSAGE             "Message"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_DEBUG               "Arctic Debug"
+    IDS_REMOVE              "Remove %S?"
+    IDS_REMOVECAPTION       "Remove Torrent"
+    IDS_BYTES               "B"
+    IDS_KIBIBYTES           "KB"
+    IDS_MEBIBYTES           "MB"
+    IDS_GIBIBYTES           "GiB"
+    IDS_DOWNSPEED           "Down"
+    IDS_UPSPEED             "Up"
+    IDS_HEALTH              "Health"
+    IDS_RESUMEERR           "Resume Error"
+    IDS_RESUMEERRTEXT       "An error occured while resuming a previous download.  No data has been lost, but files will be re-hash checked before continuing."
+END
+
+#endif    // 英语(美国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -42,6 +42,9 @@ private:
 	void NotifyLoginChannel( CChannel* pChannel, int nUserID );		// 调用前lock
 	void NotifyLogoutChannel( CChannel* pChannel, int nUserID );	// 调用前lock
 
+	//sql str check
+	string CheckSqlStr( string sStr);
+
 public:
 	CKPtrList<CBaseCommand> m_listSendCmd;
 	CKEvent m_evSendCmd;

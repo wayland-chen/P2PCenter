@@ -13,11 +13,11 @@ CClientApp::~CClientApp(void)
 {
 }
 
-CClientApp::OnConnect()
+void CClientApp::OnConnect()
 {
 }
 
-CClientApp::OnDisConnect()
+void CClientApp::OnDisConnect()
 {
 }
 

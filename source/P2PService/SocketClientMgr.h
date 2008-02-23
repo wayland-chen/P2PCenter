@@ -9,8 +9,8 @@ public:
 	CSocketClientMgr(void);
 	virtual ~CSocketClientMgr(void);
 
-	virtual OnConnect();
-	virtual OnDisConnect();
+	virtual void OnConnect();
+	virtual void OnDisConnect();
 
 	bool Connect();
 	void Release();

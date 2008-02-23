@@ -12,12 +12,12 @@ CSocketClientMgr::~CSocketClientMgr(void)
 	Release();
 }
 
-CSocketClientMgr::OnConnect()
+void CSocketClientMgr::OnConnect()
 {
 	m_bConnected = true;
 }
 
-CSocketClientMgr::OnDisConnect()
+void CSocketClientMgr::OnDisConnect()
 {
 	m_bConnected = false;
 }

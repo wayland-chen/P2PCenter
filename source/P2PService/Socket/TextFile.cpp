@@ -513,7 +513,8 @@ bool TextFile::getRoot ( LPCTSTR lpszPath, string & strRoot )
 	LPTSTR lpszRoot = (LPTSTR) strRoot.c_str();
 	memset(lpszRoot, 0, _MAX_PATH);
 	lstrcpyn(lpszRoot, lpszPath, _MAX_PATH);
-	for (LPTSTR lpsz = lpszRoot; *lpsz != '\0'; lpsz = _tcsinc(lpsz))
+	LPTSTR lpsz = 0;
+	for (lpsz = lpszRoot; *lpsz != '\0'; lpsz = _tcsinc(lpsz))
 	{
 		// find first double slash and stop
 		if ( isDirSep(lpsz[0]) && isDirSep(lpsz[1]) )

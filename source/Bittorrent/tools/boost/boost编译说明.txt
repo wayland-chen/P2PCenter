@@ -1,0 +1,3 @@
+boost 下载地址：http://www.boost.org 目前调试通过版本1.34.1
+一，先运行 tools\jam\build_dist.bat 编译 jam工具
+二，修改 boost_build.bat MSVC路径，然后编译，链接arctic要这个库的参与，将生成的lib_x86加入搜索路径

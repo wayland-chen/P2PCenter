@@ -194,10 +194,10 @@ void CClientMgr::OnLoginChannel( P2S_COMMAND::CCmdLoginChannel* pCmd )
 		pChannel->m_sAgent = "";
 		pChannel->m_nUpUserID = 0;
 		pChannel->m_nUserID = pCmd->m_nUserID;
-		pChannel->m_sNodeName = pCmd->m_sNodeName;
-		pChannel->m_sFilePath = pCmd->m_sFilePath;
-		pChannel->m_sFileName = pCmd->m_sFileName;
-		pChannel->m_sFileSize = pCmd->m_sFileSize;
+		pChannel->m_sNodeName = CheckSqlStr( pCmd->m_sNodeName);
+		pChannel->m_sFilePath = CheckSqlStr( pCmd->m_sFilePath);
+		pChannel->m_sFileName = CheckSqlStr( pCmd->m_sFileName);
+		pChannel->m_sFileSize = CheckSqlStr( pCmd->m_sFileSize);
 		pChannel->m_mapSourceID[pCmd->m_nUserID] = pCmd->m_nUserID;
 		m_db.AppendChannelToDB( pChannel);
 		m_channelMgr.SaveHtmlFile( pChannel->m_sNodeName );
@@ -544,3 +544,19 @@ void CClientMgr::UpdateChannelTick()
 		dwTick = GetTickCount();
 	}
 }
+
+string CClientMgr::CheckSqlStr( string sStr)
+{
+	string sRet = sStr;
+	const char* pOld = "'";
+	const char* pNew = "''";
+	int nPos =sRet.find( pOld);   
+	while( nPos != string::npos)   
+	{
+		sRet.replace(nPos, strlen(pOld), pNew);   
+		nPos =sRet.find( pOld ,nPos + strlen( pNew));   
+	}
+
+	return sRet;
+}
+

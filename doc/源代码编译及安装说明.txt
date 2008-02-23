@@ -12,10 +12,10 @@
 安装说明:
 
 客户端打包: 客户端打包用 NSIS, 先安装 NSIS程序,下载地址：http://opensource.kan8888.com/tools/nsis208chs2005.exe,
-		打包脚本见 bin/P2PClient.sis
+		打包脚本见 bin/Client/P2PClient.sis
 
-发布端打包: 打包脚本见 bin/P2PPublisher.nsi
-	发布端数据库表导入 doc/P2PPublish.sql 脚本
+发布端打包: 打包脚本见 bin/Client/P2PPublisher.nsi
+	发布端数据库表导入 doc/Client/P2PPublish.sql 脚本
 
 服务端安装:
 .	Windows: 安装 SqlServer 2000, 创建库并运行 doc/P2POrderServer.sql

@@ -58,7 +58,7 @@ public:
 	void release ();
 
 	// set static server ptr
-	static setServer ( HttpServerInfo & server )
+	static void setServer ( HttpServerInfo & server )
 	{
 		_server = &server;
 	}

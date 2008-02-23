@@ -52,7 +52,7 @@ void CCacheFile::DeleteOverTimeBlock()
 				m_Blocks.erase( it);
 
 				// 间断记录一次日志
-				static dwTempTime = GetTickCount();
+				static DWORD dwTempTime = GetTickCount();
 				if ( dwTempTime + 5000 < GetTickCount() )
 				{
 					CKLog::WriteLog( LOG_TYPE_DEBUG, "删除缓存块，开始点： %u， 最后访问时间差：%u", 
@@ -96,7 +96,7 @@ DWORD CCacheFile::GetData( DWORD dwStartPos, char* pBuffer, DWORD dwLen)
 			memcpy( pBuffer, it->second->m_szData + dwPos, dwLen);
 
 			// 间断记录一次日志
-			static dwTempTime = GetTickCount();
+			static DWORD dwTempTime = GetTickCount();
 			if ( dwTempTime + 5000 < GetTickCount() )
 			{
 				CKLog::WriteLog( LOG_TYPE_DEBUG, "从缓存读取,绝对开始点: %u, 相对开始点: %u, 读取长度: %u, 大块开始点: %u", 
